@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x = prompt("Introduce un numero"); //El numero introducido quedara en formato String "999"
+        let y = prompt("Introduce un segundo numero");
+        
+        x = Number(x);//conversion a numero  
+        y = Number(y);
+
+        let z = x+y;
+        //z = Number(x) + Number(y) Se ahorran lineas y declaraciones de esta manera 
+        
+        //Para componer texto multilinea --> acento grave `` y las variables se insertan sin concatenar 
+        let mensaje = `El resultado de sumar ${x} y ${y} es ${z}.
+         Gracias por usar este programa`;
+
+
+        alert(mensaje);
+
+       
+        console.log(isNaN(y));
+        
+        </script>   
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,7 +1,7 @@
 var a = 5; // Variable definida en el objeto global
 var a = "hola"; // "var" permite redeclarar variables (aunque no es recomendable)
 
-let b = 6; // Variable definida en el objeto global
+//let b = 6; // Variable definida en el objeto global
 let b = "hola"; // Error: Uncaught SyntaxError: Identifier 'b' has already been declared
 
 function funcion1() {
