@@ -15,23 +15,50 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./utils/css/estilo.css" /> -->
+    <title>Blackjak</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      /* #mano-banca {
+        margin-bottom: 10%;
+      } */
+      button {
+        margin: 2px;
+      }
+      #texto {
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+    </style>
   </head>
   <body>
-    <div class="container m-4">
-      <div>
-        <button class="btn btn-primary">Pedir carta</button>
-        <button class="btn btn-primary">Plantarse</button>
-      </div>
-      <div id="cartas_jugador"></div>
-      <div id="cartas_banca"></div>
-    </div>
+    <div>
 
-    <div id="carta-container"></div>
-    <button class="btn btn-primary" onclick="mostrarCartaAleatoria()">
-      Mostrar Carta Aleatoria
-    </button>
-    <button class="btn btn-primary" onclick="barajar()">Barajar</button>
+      <h1>Banca</h1>
+      <div id="crupier-puntuacion"></div>
+      <div id="mano-banca"></div>
+
+      <h1 id="texto"></h1>
+
+      <div id="mano-jugador"></div>
+      <h1 id="nombre-jugador"></h1>
+      <div id="jugador-puntuacion"></div>
+      <div>
+        <button id="pedir-carta" class="btn btn-primary" onclick="pedirCarta()">
+          Pedir carta
+        </button>
+        <button id="plantarse" class="btn btn-primary" onclick="finTurno()">
+          Plantarse
+        </button>
+      </div>
+
+      <button class="btn btn-primary" onclick="juegoNuevo()">
+        Jugar de Nuevo
+      </button>
+    </div>
 
     <script src="./utils/js/carta.js"></script>
     <!-- <script src="./utils/js/main.js"></script> -->
