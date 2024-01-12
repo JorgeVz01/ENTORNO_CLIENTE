@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio de Color por Estación</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      transition: background-color 2s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Selecciona una fecha</h2>
+  <div class="form-group">
+    <label for="fecha">Fecha:</label>
+    <input type="date" class="form-control" id="fecha" onchange="cambiarColorFondo()">
+  </div>
+</div>
+
+<script src="./utils/index.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Usuario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container mt-5" style="background-color: rgb(255, 250, 228); ">
+    <h1>WebStorage</h1>
+
+    <div class="row d-flex m-5" style="color: rgb(255, 255, 255);">
+
+        <!-- Local Storage -->
+        <div class="col-4" id="local" style="background-color: rgb(162, 111, 59);">
+            <h2 >Local Storage</h2>
+
+            <form id="localForm">
+                <h3 class="mt-5">Individual</h3>
+                <div class="mb-3">
+                    <label for="localClave" class="form-label">Clave</label>
+                    <input type="text" class="form-control" id="localClave" name="localClave" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="localValor" class="form-label">Valor</label>
+                    <input type="text" class="form-control" id="localValor" name="localValor" required>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarLocalStorage()">Agregar par</button>
+
+                <h3 class="mt-5">Objeto</h3>
+
+                <div class="mb-3">
+                    <label for="localNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="localNombre" name="localNombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="localApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="localApellido" name="localApellido" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="localTel" class="form-label">Teléfono</label>
+                    <input type="number" class="form-control" id="localTel" name="localTel" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="localBtncheck1">Disponibilidad</label>
+                    <input type="checkbox" class="m-3" id="localBtncheck1">
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarObjetoLocalStorage()">Agregar objeto</button>
+
+                <h3 class="mt-5">Borrar</h3>
+                <div class="mb-3">
+                    <label for="localSelclave">Selecciona una clave</label>
+                    <select id="localSelclave" class="form-select" required></select>
+                </div>
+                <button type="button" class="btn btn-primary mb-3" onclick="borrarObjetoLocalStorage()">Borrar objeto</button>
+            </form>
+        </div>
+
+        <!-- Session Storage -->
+        <div class="col-4" id="session" style="background-color: rgb(24, 106, 102);">
+            <h2 >Session Storage</h2>
+
+            <form id="sessionForm">
+                <h3 class="mt-5">Individual</h3>
+                <div class="mb-3">
+                    <label for="sessionClave" class="form-label">Clave</label>
+                    <input type="text" class="form-control" id="sessionClave" name="sessionClave" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sessionValor" class="form-label">Valor</label>
+                    <input type="text" class="form-control" id="sessionValor" name="sessionValor" required>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarSessionStorage()">Agregar par</button>
+
+                <h3 class="mt-5">Objeto</h3>
+
+                <div class="mb-3">
+                    <label for="sessionNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="sessionNombre" name="sessionNombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sessionApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="sessionApellido" name="sessionApellido" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sessionTel" class="form-label">Teléfono</label>
+                    <input type="number" class="form-control" id="sessionTel" name="sessionTel" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="sessionBtncheck1">Disponibilidad</label>
+                    <input type="checkbox" class="m-3" id="sessionBtncheck1">
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarObjetoSessionStorage()">Agregar objeto</button>
+
+                <h3 class="mt-5">Borrar</h3>
+                <div class="mb-3">
+                    <label for="sessionSelclave">Selecciona una clave</label>
+                    <select id="sessionSelclave" class="form-select" required></select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="borrarObjetoSessionStorage()">Borrar objeto</button>
+            </form>
+        </div>
+
+        <!-- Cookies -->
+        <div class="col-4" id="cookies" style="background-color: rgb(87, 20, 43);">
+            <h2 >Cookies</h2>
+
+            <form id="cookiesForm">
+                <div class="mb-3 mt-5">
+                    <label for="cookiesClave" class="form-label">Clave</label>
+                    <input type="text" class="form-control" id="cookiesClave" name="cookiesClave" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cookiesValor" class="form-label">Valor</label>
+                    <input type="text" class="form-control" id="cookiesValor" name="cookiesValor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cookiesExp" class="form-label">Expiración</label>
+                    <input type="text" class="form-control" id="cookiesExp" name="cookiesExp" required>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarCookie()">Agregar</button>
+
+                <h3 class="mt-5">Borrar</h3>
+                <div class="mb-3">
+                    <label for="cookiesSelclave">Selecciona una cookie</label>
+                    <select id="cookiesSelclave" class="form-select" required></select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="borrarCookie()">Borrar</button>
+            </form>
+        </div>
+
+        <!-- Mostrar Claves Actuales -->
+        <div class="col-12 row mt-5" id="actuales" style="background-color: rgb(252, 255, 95); color: black;">
+            <h2>Actuales</h2>
+            <!-- Local Storage -->
+            <div class="col-4" id="actuales-local" style="background-color: rgb(252, 255, 95); color: black;">
+                <ul id="resultListLocal" class="list-group mt-2 mb-3">
+                    <!-- Aquí se mostrarán las claves actuales de Local Storage -->
+                </ul>
+            </div>
+
+            <!-- Session Storage -->
+            <div class="col-4" id="actuales-session" style="background-color: rgb(252, 255, 95); color: black;">
+                <ul id="resultListSession" class="list-group mt-2 mb-3">
+                    <!-- Aquí se mostrarán las claves actuales de Session Storage -->
+                </ul>
+            </div>
+
+            <!-- Cookies -->
+            <div class="col-4" id="actuales-cookies" style="background-color: rgb(252, 255, 95); color: black;">
+                <ul id="resultListCookies" class="list-group mt-2 mb-3">
+                    <!-- Aquí se mostrarán las claves actuales de Cookies -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="./utils/index.js"></script>
+</body>
+</html>

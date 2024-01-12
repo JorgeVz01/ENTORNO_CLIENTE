@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción de Usuarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2>Formulario de Usuario</h2>
+
+    <form id="userForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="age" class="form-label">Edad:</label>
+        <input type="number" class="form-control" id="age" name="age" required>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="addUser()">Añadir Usuario</button>
+    </form>
+
+    <a href="users.html" class="btn btn-secondary mt-3">Ver Lista de Usuarios</a>
+  </div>
+
+  <script>
+    function addUser() {
+      // Obtener valores del formulario
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var age = document.getElementById("age").value;
+
+      // Crear un objeto de usuario
+      var user = {
+        name: name,
+        email: email,
+        age: age
+      };
+
+      // Obtener usuarios existentes de localStorage o inicializar un array vacío
+      var users = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Agregar el nuevo usuario al array
+      users.push(user);
+
+      // Guardar el array actualizado en localStorage
+      localStorage.setItem("users", JSON.stringify(users));
+
+      // Limpiar el formulario
+      document.getElementById("userForm").reset();
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
