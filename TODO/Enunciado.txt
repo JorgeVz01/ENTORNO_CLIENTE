@@ -1,0 +1,11 @@
+Realiza una página web que permita gestionar tareas. Para ello la página web cotará con los siguientes elementos
+
+- Formulario de introducción de datos: con elementos para la introducir nombre, descripción, fecha, prioritaria y prioridad (baja, media alta)
+- Lista con las tareas que hayan sido agregadas de tareas agregaras mostrando el nombre de la tarea, acompañadas de un select para en el momento del cambio mostrar aquellas que tengan la prioridad indicada
+- Conjunto de cartas con todas las tareas introducidas. Esta lista no se modificará en el caso de que se seleccione una prioridad para filtrar. Cada una de las cartas deberá mostrar además del nombre, la prioridad y la descripcion, una imagen (la cual dependerá del tipo de prioridad que tenga). Además contará con un botón para completar la tarea. En el momento que este botón sea pulsado la tarea desaparecerá de la lista de cartas y de tareas filtradas.
+
+> Cada vez que se realiza un filtro por el select, se modifica la lista de tareas de la parte izquierda, pero no de las cartas
+> 
+
+> Cada vez que se completa una tarea pulsando el boton de la carta, desaparece de la lista de filtrado y de la lista de cartas
+>
